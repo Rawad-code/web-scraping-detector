@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Secure Shop</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<nav>
+    <h2>SecureShop</h2>
+    <div>
+        <a href="/">Home</a>
+        <a href="/products">Products</a>
+        <a href="/dashboard">Dashboard</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <h1>Web Scraping Detection System</h1>
+    <p>This website is protected by a multi-layer scraping detector.</p>
+    <a class="btn" href="/products">View Products</a>
+</section>
+
+{% if products %}
+<section class="products">
+    <h2>Products</h2>
+
+    <div class="product-grid">
+        {% for product in products %}
+        <div class="card">
+            <h3>{{ product.name }}</h3>
+            <p>{{ product.price }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endif %}
+
+</body>
+</html>
