@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blocked</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="blocked">
+    <h1>Access Blocked</h1>
+    <p>Your request was flagged as automated scraping behavior.</p>
+
+    <div class="blocked-box">
+        <h3>Suspicion Score: {{ score }}</h3>
+        <p>{{ reason }}</p>
+    </div>
+
+    <a class="btn" href="/">Return Home</a>
+</div>
+
+</body>
+</html>
